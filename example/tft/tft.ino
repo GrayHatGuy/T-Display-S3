@@ -120,29 +120,29 @@ void loop() {
   delay(WAIT);
 
   tft.fillScreen(TFT_BLACK);
-  tft.drawString("890:.", 0, 0, 7);
+  tft.drawString("3.14159", 0, 0, 7);
   tft.drawString("", 0, 60, 7);
   delay(WAIT);
 
   tft.fillScreen(TFT_BLACK);
   tft.setTextColor(TFT_YELLOW, TFT_BLACK);
 
-  tft.drawString("01", 0, 0, 8);
+  tft.drawString("265358", 0, 0, 8);
   delay(WAIT);
 
-  tft.drawString("23", 0, 0, 8);
+  tft.drawString("979323", 0, 0, 8);
   delay(WAIT);
 
-  tft.drawString("45", 0, 0, 8);
+  tft.drawString("84626", 0, 0, 8);
   delay(WAIT);
 
-  tft.drawString("67", 0, 0, 8);
+  tft.drawString("43383", 0, 0, 8);
   delay(WAIT);
 
-  tft.drawString("89", 0, 0, 8);
+  tft.drawString("27950", 0, 0, 8);
   delay(WAIT);
 
-  tft.drawString("0:.", 0, 0, 8);
+  tft.drawString("288419...", 0, 0, 8);
   delay(WAIT);
 
   tft.setTextColor(TFT_MAGENTA);

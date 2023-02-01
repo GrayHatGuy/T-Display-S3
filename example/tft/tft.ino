@@ -41,7 +41,7 @@ void setup() {
   digitalWrite(PIN_POWER_ON, HIGH);
 
   Serial.begin(115200);
-  Serial.println("Hello T-Display-S3");
+  Serial.println("Hello applefucker T-Display-S3");
 
   tft.begin();
 
@@ -77,9 +77,9 @@ void loop() {
   tft.setTextColor(TFT_GREEN, TFT_BLACK);
 
   tft.drawString(" !\"#$%&'()*+,-./0123456", 0, 0, 2);
-  tft.drawString("789:;<=>?@ABCDEFGHIJKL", 0, 16, 2);
-  tft.drawString("MNOPQRSTUVWXYZ[\\]^_`", 0, 32, 2);
-  tft.drawString("abcdefghijklmnopqrstuvw", 0, 48, 2);
+  tft.drawString("APPLEFUCKERS", 0, 16, 2);
+  tft.drawString("applefuckers[\\]^_`", 0, 32, 2);
+  tft.drawString("A p P l E f U c K e R s", 0, 48, 2);
   int xpos = 0;
   xpos += tft.drawString("xyz{|}~", 0, 64, 2);
   tft.drawChar(127, xpos, 64, 2);
@@ -88,17 +88,17 @@ void loop() {
   tft.fillScreen(TFT_BLACK);
   tft.setTextColor(TFT_GREEN, TFT_BLACK);
 
-  tft.drawString(" !\"#$%&'()*+,-.", 0, 0, 4);
-  tft.drawString("/0123456789:;", 0, 26, 4);
-  tft.drawString("<=>?@ABCDE", 0, 52, 4);
-  tft.drawString("FGHIJKLMNO", 0, 78, 4);
-  tft.drawString("PQRSTUVWX", 0, 104, 4);
+  tft.drawString(" !\"A", 0, 0, 4);
+  tft.drawString("p", 0, 26, 4);
+  tft.drawString("P", 0, 52, 4);
+  tft.drawString("l", 0, 78, 4);
+  tft.drawString("E", 0, 104, 4);
   delay(WAIT);
 
   tft.fillScreen(TFT_BLACK);
-  tft.drawString("YZ[\\]^_`abc", 0, 0, 4);
-  tft.drawString("defghijklmno", 0, 26, 4);
-  tft.drawString("pqrstuvwxyz", 0, 52, 4);
+  tft.drawString("f", 0, 0, 4);
+  tft.drawString("U", 0, 26, 4);
+  tft.drawString("c", 0, 52, 4);
   xpos = 0;
   xpos += tft.drawString("{|}~", 0, 78, 4);
   tft.drawChar(127, xpos, 78, 4);
@@ -107,16 +107,16 @@ void loop() {
   tft.fillScreen(TFT_BLACK);
   tft.setTextColor(TFT_BLUE, TFT_BLACK);
 
-  tft.drawString("012345", 0, 0, 6);
-  tft.drawString("6789", 0, 40, 6);
-  tft.drawString("apm-:.", 0, 80, 6);
+  tft.drawString("K", 0, 0, 6);
+  tft.drawString("e", 0, 40, 6);
+  tft.drawString("R", 0, 80, 6);
   delay(WAIT);
 
   tft.fillScreen(TFT_BLACK);
   tft.setTextColor(TFT_RED, TFT_BLACK);
 
-  tft.drawString("0123", 0, 0, 7);
-  tft.drawString("4567", 0, 60, 7);
+  tft.drawString("s", 0, 0, 7);
+  tft.drawString("LFG!", 0, 60, 7);
   delay(WAIT);
 
   tft.fillScreen(TFT_BLACK);

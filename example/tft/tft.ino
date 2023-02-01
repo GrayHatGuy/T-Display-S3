@@ -8,7 +8,7 @@
 #define LCD_MODULE_CMD_1
 
 TFT_eSPI tft = TFT_eSPI();
-#define WAIT 1000
+#define WAIT 50
 unsigned long targetTime = 0; // Used for testing draw times
 
 #if defined(LCD_MODULE_CMD_1)
@@ -76,19 +76,20 @@ void loop() {
   tft.fillScreen(TFT_BLACK);
   tft.setTextColor(TFT_GREEN, TFT_BLACK);
 
-  tft.drawString(" !\"#$%&'()*+,-./0123456", 0, 0, 2);
+  tft.drawString("...........", 0, 0, 2);
   tft.drawString("APPLEFUCKERS", 0, 16, 2);
-  tft.drawString("applefuckers[\\]^_`", 0, 32, 2);
-  tft.drawString("A p P l E f U c K e R s", 0, 48, 2);
+  tft.drawString("applefuckers", 0, 32, 2);
+  tft.drawString("A p P l E ", 0, 48, 2);
+  tft.drawString("f U c K e R s ", 0, 48, 2);
   int xpos = 0;
-  xpos += tft.drawString("xyz{|}~", 0, 64, 2);
+  xpos += tft.drawString("o", 0, 64, 2);
   tft.drawChar(127, xpos, 64, 2);
   delay(WAIT);
 
   tft.fillScreen(TFT_BLACK);
   tft.setTextColor(TFT_GREEN, TFT_BLACK);
 
-  tft.drawString(" !\"A", 0, 0, 4);
+  tft.drawString("A", 0, 0, 4);
   tft.drawString("p", 0, 26, 4);
   tft.drawString("P", 0, 52, 4);
   tft.drawString("l", 0, 78, 4);
@@ -100,126 +101,16 @@ void loop() {
   tft.drawString("U", 0, 26, 4);
   tft.drawString("c", 0, 52, 4);
   xpos = 0;
-  xpos += tft.drawString("{|}~", 0, 78, 4);
+  xpos += tft.drawString("k e r s", 0, 78, 4);
   tft.drawChar(127, xpos, 78, 4);
   delay(WAIT);
 
   tft.fillScreen(TFT_BLACK);
   tft.setTextColor(TFT_BLUE, TFT_BLACK);
 
-  tft.drawString("K", 0, 0, 6);
-  tft.drawString("e", 0, 40, 6);
-  tft.drawString("R", 0, 80, 6);
-  delay(WAIT);
-
   tft.fillScreen(TFT_BLACK);
-  tft.setTextColor(TFT_RED, TFT_BLACK);
-
-  tft.drawString("s", 0, 0, 7);
-  tft.drawString("LFG!", 0, 60, 7);
-  delay(WAIT);
-
-  tft.fillScreen(TFT_BLACK);
-  tft.drawString("3.14159", 0, 0, 7);
+  tft.drawString("3.14159...", 0, 0, 7);
   tft.drawString("", 0, 60, 7);
   delay(WAIT);
-
-  tft.fillScreen(TFT_BLACK);
-  tft.setTextColor(TFT_YELLOW, TFT_BLACK);
-
-  tft.drawString("265358", 0, 0, 8);
-  delay(WAIT);
-
-  tft.drawString("979323", 0, 0, 8);
-  delay(WAIT);
-
-  tft.drawString("84626", 0, 0, 8);
-  delay(WAIT);
-
-  tft.drawString("43383", 0, 0, 8);
-  delay(WAIT);
-
-  tft.drawString("27950", 0, 0, 8);
-  delay(WAIT);
-
-  tft.drawString("288419...", 0, 0, 8);
-  delay(WAIT);
-
-  tft.setTextColor(TFT_MAGENTA);
-  tft.drawNumber(millis() - targetTime, 0, 100, 4);
-  delay(4000);
-
-  // Now test them with transparent background
-  targetTime = millis();
-
-  tft.setTextSize(1);
-  tft.fillScreen(TFT_BROWN);
-  tft.setTextColor(TFT_GREEN);
-
-  tft.drawString(" !\"Applefuckers", 0, 0, 2);
-  tft.drawString("A p p l e f u c k e r s", 0, 16, 2);
-  tft.drawString("apple", 0, 32, 2);
-  tft.drawString("fuckers", 0, 48, 2);
-  xpos = 0;
-  xpos += tft.drawString("#!&$", 0, 64, 2);
-  tft.drawChar(127, xpos, 64, 2);
-  delay(WAIT);
-
-  tft.fillScreen(TFT_BROWN);
-  tft.setTextColor(TFT_GREEN);
-
-  tft.drawString(" !\"#!&$", 0, 0, 4);
-  tft.drawString("A p p l e f u c k e r s", 0, 26, 4);
-  tft.drawString("A p p l e f u c k e r s", 0, 52, 4);
-  tft.drawString("A p p l e f u c k e r s", 0, 78, 4);
-  tft.drawString("Applefuckers", 0, 104, 4);
-
-  delay(WAIT);
-  tft.fillScreen(TFT_BROWN);
-  tft.drawString("A", 0, 0, 4);
-  tft.drawString("P", 0, 26, 4);
-  tft.drawString("P", 0, 52, 4);
-  xpos = 0;
-  xpos += tft.drawString("L", 0, 78, 4);
-  tft.drawChar(127, xpos, 78, 4);
-  delay(WAIT);
-
-  tft.fillScreen(TFT_BROWN);
-  tft.setTextColor(TFT_BLUE);
-
-  tft.drawString("E", 0, 0, 6);
-  tft.drawString("f", 0, 40, 6);
-  tft.drawString("u", 0, 80, 6);
-  delay(WAIT);
-
-  tft.fillScreen(TFT_BROWN);
-  tft.setTextColor(TFT_RED);
-
-  tft.drawString("c", 0, 0, 7);
-  tft.drawString("k", 0, 60, 7);
-  delay(WAIT);
-
-  tft.fillScreen(TFT_BROWN);
-  tft.drawString("e", 0, 0, 7);
-  tft.drawString("", 0, 60, 7);
-  delay(WAIT);
-
-  tft.fillScreen(TFT_BROWN);
-  tft.setTextColor(TFT_YELLOW);
-
-  tft.drawString("r", 0, 0, 8);
-  delay(WAIT);
-
-  tft.fillScreen(TFT_BROWN);
-  tft.drawString("s", 0, 0, 8);
-  delay(WAIT);
-
-  tft.fillScreen(TFT_BROWN);
-  tft.drawString("LFG!", 0, 0, 8);
-  delay(WAIT);
-
-  tft.setTextColor(TFT_MAGENTA);
-
-  tft.drawNumber(millis() - targetTime, 0, 100, 4);
-  delay(4000);
+  delay(200);
 }
